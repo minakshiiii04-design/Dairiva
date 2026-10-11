@@ -255,7 +255,7 @@ if (continueBtn) {
                         full_name: fullName,
                         username: username
                     },
-                    emailRedirectTo: window.location.origin
+                    emailRedirectTo: window.location.origin + window.location.pathname
                 }
             });
 
@@ -347,7 +347,7 @@ if (forgotPasswordBtn) {
         try {
             const { error } =
                 await supabaseClient.auth.resetPasswordForEmail(email, {
-                    redirectTo: window.location.origin
+                    redirectTo: window.location.origin + window.location.pathname
                 });
 
             if (error) {
@@ -1069,34 +1069,53 @@ if (logoutBtn) {
    20. RESTORE SESSION
 ========================================= */
 
+
+/* =========================================
+   20. RESTORE SESSION
+========================================= */
+
 (async function restoreSession() {
     try {
         const hashParams = new URLSearchParams(
             window.location.hash.substring(1)
         );
 
-        const isRecoveryLink = hashParams.get("type") === "recovery";
+        const queryParams = new URLSearchParams(
+            window.location.search
+        );
+
+        const isRecoveryLink =
+            hashParams.get("type") === "recovery" ||
+            queryParams.get("type") === "recovery" ||
+            queryParams.has("code");
 
         if (isRecoveryLink) {
             showPage(resetPasswordPage);
             return;
         }
 
-        const { data, error } =
+        const { data: sessionData, error: sessionError } =
             await supabaseClient.auth.getSession();
 
-        if (error) {
-            console.error("Session error:", error);
+        if (sessionError || !sessionData.session) {
             showPage(welcomePage);
             return;
         }
 
-        if (data.session) {
-            await loadWelcomeDetails(data.session.user);
-            showPage(themePage);
-        } else {
+        // Verify that the saved session still belongs to
+        // a user who can be authenticated by Supabase.
+        const { data: userData, error: userError } =
+            await supabaseClient.auth.getUser();
+
+        if (userError || !userData.user) {
+            await supabaseClient.auth.signOut();
             showPage(welcomePage);
+            return;
         }
+
+        await loadWelcomeDetails(userData.user);
+        showPage(themePage);
+
     } catch (error) {
         console.error("Session restore error:", error);
         showPage(welcomePage);
