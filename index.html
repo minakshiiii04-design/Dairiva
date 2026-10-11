@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcomePage" id="welcomePage">
+
+        <div class="logo">
+            <span>♡</span>Dairiva
+        </div>
+
+        <p class="tagline">Your little space to write, remember & feel.</p>
+
+        <button id="startBtn">Create your Diary</button>
+        
+        <button id="openLoginBtn">Already have an account? Login</button>
+
+    </div>
+
+     <div class="profile-page" id="profilePage">
+            <h2>Create Your Profile🌸 </h2>
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="text" id="username" placeholder="Create a username">
+            <input type="password" id="password" placeholder="Create a password">
+            <button id="continueBtn">Continue</button>
+    </div>
+
+    
+    <div class="login-page" id="loginPage" style="display: none;">
+        <h2>Welcome Back 🤎</h2>
+        <p>Login to your little diary 🌸</p>
+        <input type="email" id="loginEmail" placeholder="Enter your email">
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+        <button id="loginBtn">Login</button>
+        <button type="button" id="forgotPasswordBtn">
+            Forgot Password?
+        </button>
+
+        
+        <!-- Reset Password Page -->
+        <section id="resetPasswordPage" style="display: none;">
+            <h2>Reset Your Password 🤎</h2>
+
+            <input
+                type="password"
+                id="newPassword"
+                placeholder="Enter new password"
+                autocomplete="new-password"
+            >
+
+            <input
+                type="password"
+                id="confirmNewPassword"
+                placeholder="Confirm new password"
+                autocomplete="new-password"
+            >
+
+            <button type="button" id="resetPasswordBtn">
+                Update Password
+            </button>
+        </section>
+
+    </div>
+
+    <div class="theme-page" id="themePage">
+
+        <h2>Choose Your Diary Theme</h2>
+
+    <div class="themes">
+
+        <div class="theme-card">
+            <div class="theme-icon">🌸</div>
+            <h3>Girl</h3>
+            <p>Soft pink & lavender</p>
+            <button id="girlTheme">Choose</button>
+        </div>
+
+        <div class="theme-card">
+            <div class="theme-icon">🦕</div>
+            <h3>Boy</h3>
+            <p>Soft blue & cream</p>
+            <button id="boyTheme">Choose</button>
+        </div>
+
+        <div class="theme-card">
+            <div class="theme-icon">🧸</div>
+            <h3>My Choice</h3>
+            <p>Nude brown & cream</p>
+            <button id="teddyTheme">Choose</button>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="diary-home" id="diaryHome">
+        
+        <!-- Profile Picture -->
+        <div id="profilePictureSection">
+            <img
+                id="profilePicturePreview"
+                alt="Your profile picture"
+                style="display: none;"
+            >
+
+            <label for="profilePictureInput">Change profile picture 📷</label>
+            <input
+                type="file"
+                id="profilePictureInput"
+                accept="image/*"
+            >
+
+            
+            <button type="button" id="saveProfilePictureBtn">
+                Save Profile Picture 🤎
+            </button>
+
+        </div>
+
+        <div class="diary-logo">♡ Dairiva</div>
+        <h1 id="welcomeName">Hello!🌸</h1>
+        <p id="userWelcome">Welcome to your personal diary. Here you can write your thoughts, memories, and feelings. Start by creating a new entry or continue writing in your existing entries.</p>
+        <button id="newEntryBtn"> + New Entry</button>
+        <button id="logoutBtn">Logout</button>
+        <h2>Your Memories</h2>
+
+        <input type="text" id="searchEntry" placeholder="Search by title or date..">
+
+        <div id="entriesContainer">
+            <p id="noEntries">No entries yet. Start by creating a new entry!</p>
+        </div>
+    </div>
+
+    <div class="new-entry-page" id="newEntryPage">
+        <h2>Write Your Day 🌸</h2>
+        <input type="date" id="entryDate">
+        <input type="text" id="entryTitle" placeholder="Give your day a title...">
+        <textarea id="entryContent" placeholder="Write your thoughts here..."></textarea>
+        <label for="entryPicture">Add a picture 📷</label>
+        <input
+            type="file"
+            id="entryPicture"
+            accept="image/*"
+        >
+        <img
+            id="picturePreview"
+            alt="Selected diary picture"
+            style="display: none; max-width: 100%;"
+        >
+        <button id="savedEntryBtn">Save Entry 🤎</button>
+        <button id="backHomeBtn"> ← Back to Home</button>
+    </div>
+    
+        <div class="read-entry-page" id="readEntryPage">
+            <h2 id="readEntryTitle">Entry Title</h2>
+            <p id="readEntryDate">Entry Date</p>
+            <div id="readEntryText">Entry Content</div>
+            <img
+                id="readEntryPicture"
+                alt="Diary memory"
+                style="display: none; max-width: 100%; height: auto;">
+            <button id="backFromEntryBtn"> ← Back to Home</button>
+            <button id="editEntryBtn">Edit Entry ✏️</button>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="code.js"></script>
+</body>
+</html>

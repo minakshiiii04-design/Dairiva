@@ -1,0 +1,928 @@
+
+/* =====================================================
+   DAIRIVA — YOUR LITTLE DIGITAL DIARY 🧸🤎
+   Theme: Soft Nude Brown, Cream & Light Pink
+   File: style.css
+===================================================== */
+
+
+/* =====================================================
+   1. GLOBAL PAGE STYLING
+   Common styling for the complete website
+===================================================== */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff7f5;
+    font-family: Georgia, serif;
+}
+
+
+/* =====================================================
+   2. WELCOME PAGE
+   Logo, tagline and initial welcome buttons
+===================================================== */
+
+.welcomePage {
+    text-align: center;
+    display: block;
+}
+
+/* Main Dairiva logo */
+.logo {
+    font-size: 55px;
+    color: #b98f82;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+/* Pink heart beside the logo */
+.logo span {
+    color: #f3a9b9;
+}
+
+/* Short welcome tagline */
+.tagline {
+    color: #9d8178;
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+/* Create Diary button */
+#startBtn {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    background: #b58b78;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#startBtn:hover {
+    background: #9f7664;
+}
+
+/* Login button on the welcome page */
+#openLoginBtn {
+    background: #f3e3dd;
+    border-color: #e3c9bf;
+    color: #795747;
+}
+
+#openLoginBtn:hover {
+    background: #e9d0c7;
+}
+
+
+/* =====================================================
+   3. SIGN-UP / PROFILE CREATION PAGE
+   Name, email, username and password fields
+===================================================== */
+
+.profile-page {
+    display: none;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    background: #fffaf7;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(120, 80, 70, 0.12);
+}
+
+.profile-page h2 {
+    color: #b98f82;
+    margin-bottom: 20px;
+}
+
+/* Sign-up form input fields */
+.profile-page input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #f1c5cf;
+    border-radius: 15px;
+    outline: none;
+    background: #fff7f5;
+}
+
+/* Continue button */
+#continueBtn {
+    margin-top: 12px;
+    background: #b58b78;
+}
+
+
+/* =====================================================
+   4. LOGIN & PASSWORD RESET
+   Login form and password recovery section
+===================================================== */
+
+.login-page {
+    display: none;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    background: #fffaf7;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(120, 80, 70, 0.12);
+}
+
+.login-page h2 {
+    color: #a98270;
+}
+
+.login-page p {
+    color: #9d8178;
+}
+
+/* Login and reset-password input fields */
+.login-page input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #e4cfc3;
+    border-radius: 15px;
+    outline: none;
+    background: #fffdfb;
+    font-family: Georgia, serif;
+}
+
+.login-page input:focus {
+    border-color: #c9a08c;
+}
+
+/* Login and password update buttons */
+#loginBtn,
+#resetPasswordBtn {
+    background: #b58b78;
+}
+
+/* Forgot password button */
+#forgotPasswordBtn {
+    background: #f6e9e5;
+    border-color: #e7cfca;
+    color: #805e55;
+    box-shadow: none;
+}
+
+#forgotPasswordBtn:hover {
+    background: #efd8d4;
+}
+
+/* Reset password section */
+#resetPasswordPage {
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   5. THEME SELECTION PAGE
+   Girl, Boy and Teddy theme cards
+===================================================== */
+
+.theme-page {
+    display: none;
+    text-align: center;
+    width: 850px;
+}
+
+.theme-page h2 {
+    color: #b98f82;
+    margin-bottom: 25px;
+}
+
+/* Arrange theme cards in a row */
+.themes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual theme card */
+.theme-card {
+    width: 220px;
+    padding: 25px 15px;
+    background: #fffaf7;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(120, 80, 70, 0.10);
+}
+
+/* Emoji displayed on each theme card */
+.theme-icon {
+    font-size: 45px;
+}
+
+.theme-card h3 {
+    color: #b98f82;
+    margin: 12px 0 8px;
+}
+
+.theme-card p {
+    color: #9d8178;
+    font-size: 14px;
+}
+
+/* Theme selection buttons */
+#girlTheme,
+#boyTheme,
+#teddyTheme {
+    background: #f1dfd5;
+    border-color: #dfc3b4;
+    color: #795747;
+}
+
+#girlTheme:hover,
+#boyTheme:hover,
+#teddyTheme:hover {
+    background: #e4c6b7;
+}
+
+
+/* =====================================================
+   6. THEME COLOURS
+   Background and heading colours for each selected theme
+===================================================== */
+
+/* Girl theme — pink */
+body.girl-theme {
+    background-color: #FCE4EC;
+}
+
+body.girl-theme .theme-page {
+    background: #fff0f4;
+}
+
+body.girl-theme h2,
+body.girl-theme h3 {
+    color: #d8899b;
+}
+
+body.girl-theme .diary-home {
+    background: #fff7fa;
+}
+
+body.girl-theme .diary-home h1,
+body.girl-theme .diary-home h2,
+body.girl-theme .diary-logo {
+    color: #d8899b;
+}
+
+/* Boy theme — soft blue */
+body.boy-theme {
+    background-color: #E3F2FD;
+}
+
+body.boy-theme .theme-page {
+    background: #eef7fa;
+}
+
+body.boy-theme h2,
+body.boy-theme h3 {
+    color: #8ab8c8;
+}
+
+body.boy-theme .diary-home {
+    background: #f7fbfc;
+}
+
+body.boy-theme .diary-home h1,
+body.boy-theme .diary-home h2,
+body.boy-theme .diary-logo {
+    color: #7da8b5;
+}
+
+/* Teddy theme — nude brown and cream */
+body.teddy-theme {
+    background-color: #F3E5D0;
+}
+
+body.teddy-theme .theme-page {
+    background: #f3e8df;
+}
+
+body.teddy-theme h2,
+body.teddy-theme h3 {
+    color: #a98270;
+}
+
+body.teddy-theme .diary-home {
+    background: #fffaf7;
+}
+
+body.teddy-theme .diary-home h1,
+body.teddy-theme .diary-home h2,
+body.teddy-theme .diary-logo {
+    color: #a98270;
+}
+
+
+/* =====================================================
+   7. DIARY HOME PAGE
+   Logo, welcome message, buttons and memories section
+===================================================== */
+
+.diary-home {
+    display: none;
+    text-align: center;
+    width: 600px;
+    max-width: 600px;
+    min-height: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #fffaf7;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(120, 80, 70, 0.12);
+}
+
+/* Logo inside Diary Home */
+.diary-logo {
+    font-size: 32px;
+    color: #b98f82;
+    font-family: cursive;
+}
+
+/* Main greeting */
+.diary-home h1 {
+    color: #b98f82;
+    margin-top: 35px;
+}
+
+/* General text inside Diary Home */
+.diary-home p {
+    color: #9d8178;
+    line-height: 1.6;
+}
+
+/* Welcome message card */
+#userWelcome {
+    background: linear-gradient(135deg, #fff8f3, #f7e8e3);
+    border: 1px solid #ead5ca;
+    border-radius: 20px;
+    padding: 20px 16px;
+    margin: 16px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(121, 87, 71, 0.08);
+}
+
+/* Memories section heading */
+.diary-home h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* New Entry button */
+#newEntryBtn {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 13px 25px;
+    background: #dba9a8;
+    border-color: #cf9998;
+    color: #fffaf7;
+    font-size: 16px;
+}
+
+#newEntryBtn:hover {
+    background: #c98f91;
+}
+
+/* Logout button */
+#logoutBtn {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #f1e4dc;
+    border-color: #dfcabe;
+    color: #795b4c;
+}
+
+#logoutBtn:hover {
+    background: #e5d1c5;
+}
+
+/* Memories list container */
+#entriesContainer {
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Message shown when no entries exist */
+#noEntries {
+    text-align: center;
+    padding: 25px 10px;
+    color: #b89a8d;
+}
+
+
+/* =====================================================
+   8. PROFILE PICTURE SECTION
+   Profile photo, file input and save button
+===================================================== */
+
+#profilePictureSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    background: #fffaf6;
+    border: 1px solid #efdfd6;
+    border-radius: 18px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+/* Circular profile picture — keep its size at 90 × 90 */
+#profilePicturePreview {
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e8cfc5;
+    box-shadow: 0 3px 10px rgba(121, 87, 71, 0.15);
+    transition: box-shadow 0.25s ease;
+}
+
+#profilePicturePreview:hover {
+    box-shadow: 0 5px 14px rgba(121, 87, 71, 0.22);
+}
+
+/* Profile picture upload label */
+#profilePictureSection label {
+    display: block;
+    color: #987260;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Save profile picture button */
+#saveProfilePictureBtn {
+    background: #dba9a8;
+    border-color: #cf9998;
+    color: #fffaf7;
+}
+
+#saveProfilePictureBtn:hover {
+    background: #c98f91;
+}
+
+
+/* =====================================================
+   9. NEW DIARY ENTRY PAGE
+   Date, title, diary text and picture upload
+===================================================== */
+
+.new-entry-page {
+    display: none;
+    text-align: center;
+    width: 600px;
+    min-height: 500px;
+    padding: 30px;
+    background: #fffaf7;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(120, 80, 70, 0.12);
+}
+
+/* New entry heading */
+.new-entry-page h2 {
+    color: #a98270;
+    margin-bottom: 25px;
+}
+
+/* Date, title and diary text fields */
+.new-entry-page input,
+.new-entry-page textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #e4cfc3;
+    border-radius: 15px;
+    outline: none;
+    background: #fffdfb;
+    font-family: Georgia, serif;
+}
+
+/* Diary writing area */
+.new-entry-page textarea {
+    resize: none;
+    height: 180px;
+}
+
+/* Highlight fields when selected */
+.new-entry-page input:focus,
+.new-entry-page textarea:focus {
+    border-color: #c9a08c;
+}
+
+/* Save Entry button */
+#savedEntryBtn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #a98270;
+    border-color: #98715f;
+}
+
+#savedEntryBtn:hover {
+    background: #896451;
+}
+
+/* Back to Home button */
+#backHomeBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #f1e6df;
+    border-color: #dfcfc4;
+    color: #795b4c;
+}
+
+#backHomeBtn:hover {
+    background: #e5d4c8;
+}
+
+
+/* =====================================================
+   10. FILE INPUTS
+   Custom Choose File button for picture uploads
+===================================================== */
+
+input[type="file"] {
+    font-family: inherit;
+    font-size: 13px;
+    color: #806253;
+    background: #fff8f3;
+    border: 1px solid #e5cfc2;
+    border-radius: 12px;
+    padding: 8px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+/* Style the browser's Choose File button */
+input[type="file"]::file-selector-button {
+    background: #ead4c8;
+    color: #795747;
+    border: 1px solid #ddc0b1;
+    border-radius: 9px;
+    padding: 9px 13px;
+    margin-right: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #dfbfb0;
+}
+
+/* Picture upload fields */
+#profilePictureInput,
+#entryPicture {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+
+/* =====================================================
+   11. IMAGE PREVIEWS
+   Selected diary picture and profile picture
+===================================================== */
+
+/* Preview shown before saving a diary entry */
+#picturePreview {
+    max-width: 100%;
+    width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid #ead4c8;
+    padding: 4px;
+    background: #fff8f3;
+    box-shadow: 0 4px 12px rgba(121, 87, 71, 0.12);
+    margin: 12px auto;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#picturePreview:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(121, 87, 71, 0.18);
+}
+
+/* Image displayed inside the Read Entry page */
+#readEntryPicture {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 2px solid #ead8ce;
+    margin: 12px auto;
+}
+
+
+/* =====================================================
+   12. SAVED DIARY ENTRY CARDS
+   Title, date, content preview and entry pictures
+===================================================== */
+
+.entry-card {
+    background: #fffaf6;
+    border: 1px solid #ead8cc;
+    border-radius: 18px;
+    padding: 18px;
+    margin: 16px 0;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(121, 87, 71, 0.08);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Card heading */
+.entry-card h3 {
+    color: #795747;
+    margin: 0 0 8px;
+    overflow-wrap: anywhere;
+}
+
+/* Date and content preview */
+.entry-card p {
+    color: #8b7062;
+    margin: 6px 0;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Gentle hover effect */
+.entry-card:hover {
+    border-color: #d9b9a9;
+    box-shadow: 0 7px 18px rgba(121, 87, 71, 0.13);
+}
+
+/* Pictures displayed on saved entry cards */
+.entry-card img {
+    display: block;
+    width: 150px;
+    height: 120px;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 12px auto;
+    border-radius: 14px;
+    border: 2px solid #ead8ce;
+}
+
+/* Spacing for entry action buttons */
+.entry-card button {
+    margin-top: 8px;
+}
+
+/* Read button */
+.entry-card button:first-of-type {
+    background: #b58b78;
+}
+
+/* Edit button */
+.entry-card button:nth-of-type(2) {
+    background: #e8c5c2;
+    border-color: #d9aaa8;
+    color: #714f48;
+}
+
+/* Delete button */
+.entry-card button:nth-of-type(3) {
+    background: #f2e4dd;
+    border-color: #dfc8bc;
+    color: #805b4d;
+}
+
+.entry-card button:nth-of-type(3):hover {
+    background: #e8d0c5;
+}
+
+
+/* =====================================================
+   13. READ DIARY ENTRY PAGE
+   Full diary text, date, picture and edit button
+===================================================== */
+
+.read-entry-page {
+    display: none;
+    text-align: center;
+    width: 600px;
+    min-height: 400px;
+    padding: 30px;
+    background: #fffaf7;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(120, 80, 70, 0.12);
+}
+
+/* Entry title */
+.read-entry-page h2 {
+    color: #a98270;
+    margin-top: 30px;
+}
+
+/* Entry date */
+#readEntryDate {
+    color: #b89a8d;
+    font-size: 14px;
+}
+
+/* Full diary text */
+#readEntryText {
+    color: #7f685e;
+    margin-top: 25px;
+    text-align: left;
+    background: #fffdfb;
+    padding: 20px;
+    min-height: 150px;
+    border-radius: 18px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Back button on Read Entry page */
+#backFromEntryBtn {
+    padding: 9px 18px;
+    background: #f1e6df;
+    border-color: #dfcfc4;
+    color: #795b4c;
+}
+
+#backFromEntryBtn:hover {
+    background: #e5d4c8;
+}
+
+/* Edit Entry button */
+#editEntryBtn {
+    margin-top: 20px;
+    padding: 10px 22px;
+    background: #c9a08c;
+    font-size: 14px;
+}
+
+#editEntryBtn:hover {
+    background: #b98f7d;
+}
+
+
+/* =====================================================
+   14. SEARCH BAR
+   Search diary entries by title or date
+===================================================== */
+
+#searchEntry {
+    width: 80%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #e4cfc3;
+    border-radius: 20px;
+    outline: none;
+    background: #fffdfb;
+    color: #7f685e;
+    font-family: Georgia, serif;
+}
+
+/* Search bar focus effect */
+#searchEntry:focus {
+    border-color: #c9a08c;
+}
+
+
+/* =====================================================
+   15. GLOBAL BUTTON DESIGN
+   Shared teddy-style appearance for all buttons
+===================================================== */
+
+button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fffaf6;
+    background: #b58b78;
+    border: 1px solid #a98270;
+    border-radius: 14px;
+    padding: 11px 19px;
+    margin: 5px 3px;
+    cursor: pointer;
+    box-shadow: 0 3px 7px rgba(111, 77, 61, 0.12);
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Hover animation for buttons */
+button:hover {
+    background: #9f7664;
+    box-shadow: 0 5px 11px rgba(111, 77, 61, 0.17);
+    transform: translateY(-2px);
+}
+
+/* Small press effect */
+button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 4px rgba(111, 77, 61, 0.12);
+}
+
+/* Keyboard navigation outline */
+button:focus-visible {
+    outline: 2px solid #d9a6a0;
+    outline-offset: 3px;
+}
+
+/* Disabled button appearance */
+button:disabled {
+    background: #d9c8bf;
+    border-color: #d9c8bf;
+    color: #fffaf6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   16. RESPONSIVE DESIGN
+   Adjust layouts for phones and smaller screens
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* Theme page uses most of the available width */
+    .theme-page {
+        width: 90%;
+    }
+
+    /* Stack theme cards vertically */
+    .themes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .theme-card {
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    /* Main diary pages fit smaller screens */
+    .diary-home,
+    .new-entry-page,
+    .read-entry-page {
+        width: 90%;
+        max-width: 600px;
+        box-sizing: border-box;
+        padding: 25px 20px;
+    }
+
+    /* Adjust welcome heading */
+    .diary-home h1 {
+        font-size: 28px;
+    }
+
+    /* Search bar uses full available width */
+    #searchEntry {
+        width: 100%;
+    }
+
+    /* Shorter writing area on phones */
+    .new-entry-page textarea {
+        height: 150px;
+    }
+
+    /* Slightly compact entry cards */
+    .entry-card {
+        padding: 15px;
+    }
+}
+
+/* Smaller buttons and welcome cards on narrow phones */
+@media (max-width: 480px) {
+
+    button {
+        padding: 10px 15px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    #userWelcome,
+    #profilePictureSection {
+        padding: 14px;
+        border-radius: 16px;
+    }
+}
+
+/* =====================================================
+   END OF DAIRIVA STYLES 🧸🤎
+===================================================== */
