@@ -1084,8 +1084,7 @@ if (logoutBtn) {
 
         const isRecoveryLink =
             hashParams.get("type") === "recovery" ||
-            queryParams.get("type") === "recovery" ||
-            queryParams.has("code");
+            queryParams.get("type") === "recovery" 
 
         if (isRecoveryLink) {
             showPage(resetPasswordPage);
